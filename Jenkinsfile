@@ -9,7 +9,7 @@ pipeline {
                     build job: 'PES1UG22CS493-1', wait: true
 
                     // Compile the C++ file
-                    sh 'g++ -o main main.cpp'
+                    sh 'g++ -o a main.cpp'
                 }
             }
         }
@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     // Run the compiled C++ program
-                    sh './main'
+                    sh './a'
                 }
             }
         }
